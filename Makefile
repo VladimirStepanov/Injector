@@ -8,6 +8,7 @@ LIB=lib/libinject.a
 all: $(SOURCES) $(LIB)
 	
 $(LIB): $(OBJECTS) 
+	mkdir -p lib
 	ar rcs $(LIB) $(OBJECTS)
 
 .cpp.o:
@@ -15,7 +16,7 @@ $(LIB): $(OBJECTS)
 
 clean:
 	rm -f src/*.o
-	rm -f $(LIB)
+	rm -rf lib
 
 
 debug: CFLAGS+= -DDEBUG -g
