@@ -1,7 +1,5 @@
-<h1>Info</h1>
-<p>C++ library based on <a href="https://www.kernel.org/doc/Documentation/networking/tproxy.txt">tproxy</a> for modify network traffic route through your computer and examples how usage it.  Before start run script iptables.sh as root. Default redirect traffic from dst port 80 to port 9876. Edit it if needed.</p>
-<h3>Examples (before usage make library)</h3>
-<ul>
-<li><p><b>repeater</b> - move data between client and server without modify traffic.</p></li>
-<li><p><b>http_replace</b> - modify http not gziped data. Input parameters: old_word new_word. Test for it examples/http_replace/tests write with <a href="http://cxxtest.com/">CxxTest library<a> 
-</ul>
+# Base info
+C++ library based on [tproxy](https://www.kernel.org/doc/Documentation/networking/tproxy.txt) for modify network traffic route through your machine and examples how usage it.  **Before start run script iptables.sh as root.** By default redirect traffic from dst port 80 to port 9876. Edit it if needed.
+# Examples (before usage make library)
+* repeater - move data between client and server without modify traffic.
+* http_replace - modify http not gziped data. Input parameters: old_word new_word. Test for it examples/http_replace/tests write with [CxxTest library](http://cxxtest.com/).
