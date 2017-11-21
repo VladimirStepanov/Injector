@@ -9,13 +9,13 @@ C++ library based on [tproxy](https://www.kernel.org/doc/Documentation/networkin
 | ------------- | ------------- |
 | **Injector (u_int16_t port)**  | Constructor for Injector class. Port for redirect iptables rule |
 | **DEFAULT_PORT = 9876**  | Default port for redirect iptables rule  |
-|  **void loop (injector_cb in_cb, injector_cb out_cb = DEF_CB)** | Method of class Injector. in_cb - callback for analysis input data from server, out_cb - callack for analysis input data from client (default is DEF_CB)   |
+|  **void loop (injector_cb in_cb, injector_cb out_cb = DEF_CB)** | Method of class Injector. in_cb - callback for processing input data from server, out_cb - callack for processing input data from client (default is DEF_CB)   |
 | **injector_cb** | typedef int (*injector_cb)(SockBridge &obj)|
 
 ### API class SockBridge 
 | Name  | Description |
 | ------------- | ------------- |
 | **ssize_t read(u_int8_t \*arr, ssize_t br)**  | Read input data|
-| **ssize_t write(u_int8_t \*arr, ssize_t br)**  | Read input data|
-| **int get_from_fd() const**  | Get descriptor input descriptor|
-| **int get_to_fd()**  | Get descriptor output descriptor|
+| **ssize_t write(u_int8_t \*arr, ssize_t br)**  | Write data to output|
+| **int get_from_fd() const**  | Get input descriptor|
+| **int get_to_fd()**  | Get output descriptor|
